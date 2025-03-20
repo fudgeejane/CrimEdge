@@ -21,5 +21,6 @@ Follow the steps below to set up and run the project locally:
 4. **Install additional dependencies:**
    ```bash
    npm install react react-dom vite react-router-dom firebase react-icons bootstrap eslint prettier @vitejs/plugin-react
+   npm install gsap-trial
 
 
