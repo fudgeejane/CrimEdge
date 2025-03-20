@@ -15,6 +15,11 @@ Follow the steps below to set up and run the project locally:
    ```bash
    git clone https://github.com/fudgeejane/CrimEdge.git
 
-2. Dependencies to install
-  npm install react react-dom vite react-router-dom firebase react-icons bootstrap eslint prettier @vitejs/plugin-react
+2. **Install dependencies:**
+   ```bash
+   npm install
+4. **Install additional dependencies:**
+   ```bash
+   npm install react react-dom vite react-router-dom firebase react-icons bootstrap eslint prettier @vitejs/plugin-react
+
 
