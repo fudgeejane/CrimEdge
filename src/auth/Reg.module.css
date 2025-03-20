@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    height: 100vh;
+    background: radial-gradient(circle, rgba(225,238,254,1) 0%, rgba(90,110,201,1) 100%);
+  }
+  
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .form {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    color: #fdfdfd;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #000000a9;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .button {
+    background: linear-gradient(to right, #161647, #3535AD);
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .button:hover { 
+    background: linear-gradient(to right, #28289e, #5050d6);
+  }
+  
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .remember input {
+    margin-right: 5px;
+  }
+  
+  .forgot {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .forgot:hover {
+    text-decoration: underline;
+  }
+  
+  .signup {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .link {
+    text-decoration: underline;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  

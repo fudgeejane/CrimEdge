@@ -1,0 +1,310 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background: radial-gradient(circle, rgba(225,238,254,1) 0%, rgba(90,110,201,1) 100%);
+  }
+  
+  .LandingContainer {
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+ 
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header img {
+    width: 200px;
+  }
+  
+  button.signin {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(63, 63, 63);
+    padding: 10px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 100px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  button.signin:hover {
+    background-color: #dbdbdb;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  }
+
+  .getStarted {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-bottom: 55px;
+    padding-top: 25px
+  }
+
+  h1.edge {
+    font-size: 4.5rem;
+    color: #dddddd;
+    margin: 0; 
+    text-shadow: 2px 1px #494949;
+  }
+  
+  h1.conquer {
+    font-size: 4rem;
+    color: #dddddd;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    text-shadow: 2px 1px #494949;
+  }
+
+ span.edge, span.conquer { 
+    color: #000080;
+    font-size: 5.5rem;
+  }
+  
+  .getStartedHead {
+    width: 50%;
+  }
+  
+  .getStartedBody {
+    color: rgb(255, 255, 255);
+    width: 50%;
+    font-size: 17px;
+  }
+  
+  .getStartedInput {
+    width: 49%;
+    gap: 20px;
+    display: flex;
+    padding: 10px 0;
+  }
+
+  .getStartedInput input {
+    flex: 1;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 100px;
+  }
+
+  .getStartedInput input:focus {
+    outline: none;
+  }
+
+  .link {
+    display: inline-block;
+    width: 30%; /* Make sure it inherits full width */
+    text-decoration: none;
+  }
+  
+  .getStartedInput button {
+    background: linear-gradient(to right, #161647, #3535AD);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    width: 100%; /* Ensure it takes the full width of the parent */
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .getStartedInput button:hover {
+    background: linear-gradient(to right, #28289e, #5050d6);
+  }
+  
+
+  .joinContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+
+  .joinContainerHead {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 2px 1px #494949;
+  }
+
+  .joinContent {
+    display: flex;
+    gap: 50px;
+    margin-top: -15px;
+  }
+
+  .joinDescription {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .joinDescription h1{
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .joinDescription p {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .faqContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+
+  .faqContainerHead {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 2px 1px #494949;
+  }
+
+  .faqContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: -15px;
+  }
+  
+  .faqDescription {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.7s ease;
+  }
+  
+  .question {
+    font-weight: bold;
+    color: white;
+    margin: 0;
+  }
+  
+  /* Hidden by default */
+  .dropdownContent {
+    padding: 10px;
+    margin-top: 0;
+    color: white;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.7s ease;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
+  /* When hovered, expand the dropdown and push down the next one */
+  .faqDescription.expanded .dropdownContent {
+    opacity: 1;
+    max-height: 150px; /* Adjust based on content height */
+    margin-top: 5px;
+  }
+  
+  /* Smooth transition for dropdown content */
+  .dropdownContent p {
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background 0.7s ease;
+  }
+  
+
+  .footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 30px 20px;
+    font-size: 14px;
+    width: 100%; /* Ensure it covers full width */
+    box-sizing: border-box; /* Prevent overflow issues */
+    margin-top:70px;
+  }
+  
+  .footerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footerSection {
+    flex: 1;
+    min-width: 250px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
+  .footerSection h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f9f9f9;
+  }
+  
+  .footerSection p {
+    margin: 0 0 8px;
+    color: #bbb;
+  }
+  
+  .footerSection ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footerSection ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footerSection ul li a {
+    text-decoration: none;
+    color: #bbb;
+    transition: color 0.3s ease;
+  }
+  
+  .footerSection ul li a:hover {
+    color: #fff;
+  }
+  
+  .footerBottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+    color: #bbb;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .socialIcons a {
+    color: #bbb;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  .socialIcons a:hover {
+    color: #ffffff;
+  }
+  
