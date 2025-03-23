@@ -12,16 +12,13 @@ export default function Header({ toggleSidebar }) {
       <div className="menu-toggle">
         <FiMenu className="menu-icon" onClick={toggleSidebar} />
       </div>
-      <div className="flex items-center gap-4">
-        <input type="text" placeholder="Search..." className="search-input" />
-      </div>
       <div className="user-head">
         <div className="notification">
           <i className="bi bi-bell"></i>
         </div>
         <div className="user-info">
           <i className="bi bi-person-circle"></i>
-          <span>Francine Jane</span>
+          <span>User's Name</span>
         </div>
       </div>
     </div>
