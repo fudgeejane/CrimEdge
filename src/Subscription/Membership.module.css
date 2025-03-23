@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers child elements horizontally */
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(circle, rgba(225, 238, 254, 1) 0%, rgba(90, 110, 201, 1) 100%);
+}
+
+.memContainer {
+  text-align: left;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center; /* Centers child elements horizontally */
+  margin-top: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.header img {
+  width: 200px;
+}
+
+button.signout {
+  margin-left: auto;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  color: rgb(63, 63, 63);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 100px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+button.signout:hover {
+  background-color: #dbdbdb;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+/***********************************************************************/
+/*  SUBSCRIPTION JSX                                                     */
+/***********************************************************************/
+
+.subContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Ensures 4 cards per row */
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.subContent {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 20px;
+  text-align: center;
+  height: 500px;
+}
+
+.subContent:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.subHead {
+  font-size: 1.1rem;
+  padding: 5px;
+  background: linear-gradient(to right, #161647, #3535AD);
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.subBodyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subBody {
+  padding: 10px 0 ;
+  text-align: left;
+}
+
+.subBodyHead p {
+  font-weight: bold;
+  color: #333;
+}
+
+.subBodyCon p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.subBodyCon ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.subBodyPay a {
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(to right, #161647, #3535AD);
+  padding: 10px 80px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.subBodyPay a:hover {
+  background: linear-gradient(to right, #2a2a83, #4343dd);
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .subContainer {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .subContainer {
+    grid-template-columns: repeat(1, 1fr); /* 1 card per row on mobile */
+  }
+}
+
+
+
+
+
+
+
+/***********************************************************************/
+/*  PAYMENT JSX                                                     */
+/***********************************************************************/
+
+.memContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.memContent h1 {
+  color: #000080;
+  font-size: 35px;
+  text-shadow: 1px 1px #494949;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.memContent p {
+  color: #5a5a5a;
+  font-size: 16px;
+  text-align: center;
+}
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+  color: #5a5a5a;
+  font-size: 18px;
+  text-align: center;
+}
+
+.paymentMethod {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 0px 20px;
+  width: 400px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.paymentMethod:hover {
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.divider a {
+  text-decoration: none;
+  color: inherit; /* Keeps the text color consistent */
+}
+
+.paymentOption img {
+  width: 40px;
+}
+
+.paymentOption p {
+  color: rgb(59, 59, 59);
+  font-weight: 600;
+}
+
+
+
+
+
+/***********************************************************************/
+/*  CREITDEBIT JSX                                                     */
+/***********************************************************************/
+
+.paymentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.paymentContent {
+  width: 100%;
+  max-width: 500px;
+  padding: 0 15px; /* Adds padding for smaller screens */
+}
+
+.paymentHead {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #333;
+  font-size: 18px;
+  text-align: center; /* Centers text on small screens */
+}
+
+.paymentHead h1 {
+  color: #222;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: -5px;
+}
+
+.paymentImages {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Center images */
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+}
+
+.paymentImages img {
+  width: 40px;
+}
+
+.paymentForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.paymentForm input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f5f5f5;
+  transition: all 0.3s ease-in-out;
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.cardDetails input {
+  flex: 1;
+}
+
+/* Responsive design for 480px and below */
+@media (max-width: 480px) {
+  .paymentContent {
+    padding: 0 10px; /* Reduce padding for small screens */
+  }
+
+  .paymentHead h1 {
+    font-size: 22px;
+  }
+
+  .paymentImages {
+    gap: 10px;
+  }
+
+  .paymentImages img {
+    width: 35px; /* Make images smaller for compact display */
+  }
+
+  .paymentForm {
+    width: 100%;
+  }
+
+  .cardDetails {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.paymentForm button {
+  background: linear-gradient(to right, #161647, #3535AD);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+.paymentForm button:hover {
+  background: linear-gradient(to right, #2a2a83, #4343dd);
+}
+
+.formRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.formCol1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2e2e2e;
+  line-height: 1.4;
+}
+
+.formCol2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  min-width: 80px;
+}
+
+.formCol2 a {
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.formCol2 a:hover {
+  text-decoration: underline;
+}
+
+.formAgreement p {
+  color: rgb(109, 109, 109);
+  line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.formAgreement span.terms {
+  color: #004186;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.formAgreement span.checkTerms {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.formAgreement input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* General Tablet (768px) Adjustments */
+@media (max-width: 768px) {
+  .paymentContent {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .paymentHead h1 {
+    font-size: 22px;
+  }
+
+  .paymentForm {
+    width: 100%;
+  }
+
+  .paymentImages img {
+    width: 35px;
+  }
+}
+
+
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footerSection {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footerSection h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f39c12;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footerSection p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.socialIcons a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.socialIcons a:hover {
+  color: #f39c12;
+}
+
+.footerBottom {
+  margin-top: 20px;
+  padding: 15px 0;
+  background-color: #111;
+  font-size: 0.8rem;
+}
+
+.footerBottom p {
+  margin: 0;
+}
