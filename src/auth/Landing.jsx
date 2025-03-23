@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Landing.module.css';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
-
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 export default function Landing() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -44,11 +45,51 @@ export default function Landing() {
     },
   ];
 
+  const headerRef = useRef(null);
+  const getStartedRef = useRef(null);
+  const joinSectionRef = useRef(null);
+  const faqRef = useRef(null);
+
+  // GSAP Animation
+  useGSAP(() => {
+    gsap.from(headerRef.current, {
+      y: -50,
+      opacity: 0,
+      duration: 1,
+      ease: 'power2.out',
+    });
+
+    gsap.from(getStartedRef.current, {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      delay: 0.3,
+      ease: 'power2.out',
+    });
+
+    gsap.from(joinSectionRef.current.children, {
+      opacity: 0,
+      y: 20,
+      stagger: 0.2,
+      duration: 1,
+      delay: 0.5,
+      ease: 'power2.out',
+    });
+
+    gsap.from(faqRef.current, {
+      y: 30,
+      opacity: 0,
+      duration: 1,
+      delay: 0.7,
+      ease: 'power2.out',
+    });
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.LandingContainer}>
         {/* Header */}
-        <div className={styles.header}>
+        <div className={styles.header} ref={headerRef}>
           <img src="./src/assets/CrimEdge.png" alt="Logo" />
           <Link to="/signIn">
             <button className={styles.signin}>Sign In</button>
@@ -56,13 +97,13 @@ export default function Landing() {
         </div>
 
         {/* Get Started Section */}
-        <div className={styles.getStarted}>
+        <div className={styles.getStarted} ref={getStartedRef}>
           <div className={styles.getStartedHead}>
             <h1 className={styles.edge}>
               EDGE over the <span className={styles.edge}>REST</span>
             </h1>
             <h1 className={styles.conquer}>
-              <span className={styles.conquer}><span></span>CONQUER</span> the TEST!
+              <span className={styles.conquer}>CONQUER</span> the TEST!
             </h1>
           </div>
           <div className={styles.getStartedBody}>
@@ -73,32 +114,31 @@ export default function Landing() {
           <div className={styles.getStartedInput}>
             <input type="email" placeholder="Email address" className={styles.input} />
             <Link to="/signUp" className={styles.link}>
-              <button className={styles.getStartedButton}>Get Started</button>
+              Get Started
             </Link>
-
           </div>
         </div>
 
         {/* Reasons to Join Section */}
-        <div className={styles.joinContainer}>
+        <div className={styles.joinContainer} ref={joinSectionRef}>
           <div className={styles.joinContainerHead}>
             <h1>Reasons to Join Crim Edge</h1>
           </div>
           <div className={styles.joinContent}>
             <div className={styles.joinDescription}>
-              <h1>All-in-One Learning Platform</h1>
+              <h2>All-in-One Learning Platform</h2>
               <p>
                 Access comprehensive review materials, video lectures, and practice exams designed to cover all criminology board exam topics.
               </p>
             </div>
             <div className={styles.joinDescription}>
-              <h1>Expert Support & Guidance</h1>
+              <h2>Expert Support & Guidance</h2>
               <p>
                 Get valuable insights through live Q&A sessions, mentorship, and performance tracking to improve your weak areas.
               </p>
             </div>
             <div className={styles.joinDescription}>
-              <h1>Career-Boosting Opportunities</h1>
+              <h2>Career-Boosting Opportunities</h2>
               <p>
                 Earn a completion certificate, explore job listings, and access internship programs to jumpstart your career in law enforcement.
               </p>
@@ -107,9 +147,9 @@ export default function Landing() {
         </div>
 
         {/* FAQ Section */}
-        <div className={styles.faqContainer}>
+        <div className={styles.faqContainer} ref={faqRef}>
           <div className={styles.faqContainerHead}>
-            <h1>FAQ</h1>
+            <h1>Frequently Asked Questions</h1>
           </div>
           <div className={styles.faqContent}>
             {faqData.map((item, index) => (
@@ -135,46 +175,38 @@ export default function Landing() {
             ))}
           </div>
         </div>
-      </div>
 
-      {/* Footer */}
-<footer className={styles.footer}>
-  <div className={styles.footerContainer}>
-    <div className={styles.footerSection}>
-      <h3>About Crim Edge</h3>
-      <p>
-        Crim Edge is a leading platform for criminology board exam preparation. Access review materials, video lectures, and practice exams to boost your chances of success.
-      </p>
-    </div>
-    <div className={styles.footerSection}>
-      <h3>Contact Us</h3>
-      <p>Email: support@crimedge.com</p>
-      <p>Phone: +63 969 045 6744</p>
-      <p>Address: Manila, Philippines</p>
-    </div>
-    <div className={styles.footerSection}>
-      <h3>Social Media</h3>
-      <p>
-        Follow us on social media to find out about the latest updates, tips, and resources.
-      </p>
-      <div className={styles.socialIcons}>
-        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-          <FaFacebook />
-        </a>
-        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-          <FaTwitter />
-        </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-          <FaInstagram />
-        </a>
-      </div>
-    </div>
-  </div>
-  <div className={styles.footerBottom}>
-    <p>&copy; {new Date().getFullYear()} Crim Edge. All Rights Reserved.</p>
-  </div>
-</footer>
+       
 
+      </div>
+       {/* Footer */}
+      
+      <footer className={styles.footer}>
+        <div className={styles.footerContainer}>
+          <div className={styles.footerSection}>
+            <h3>About Crim Edge</h3>
+            <p>Crim Edge is a leading platform for criminology board exam preparation.</p>
+          </div>
+          <div className={styles.footerSection}>
+            <h3>Contact Us</h3>
+            <p>Email: support@crimedge.com</p>
+            <p>Phone: +63 969 045 6744</p>
+            <p>Address: Manila, Philippines</p>
+          </div>
+          <div className={styles.footerSection}>
+            <h3>Social Media</h3>
+            <div className={styles.socialIcons}>
+              <a href="#"><FaFacebook /></a>
+              <a href="#"><FaTwitter /></a>
+              <a href="#"><FaInstagram /></a>
+            </div>
+          </div>
+        </div>
+        <div className={styles.footerBottom}>
+          <p>&copy; {new Date().getFullYear()} Crim Edge. All Rights Reserved.</p>
+        </div>
+      </footer>
+      
     </div>
   );
 }
