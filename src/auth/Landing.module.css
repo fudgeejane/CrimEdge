@@ -1,310 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body {
+  font-family: Poppins, sans-serif;
+}
+
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    background: radial-gradient(circle, rgba(225,238,254,1) 0%, rgba(90,110,201,1) 100%);
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers child elements horizontally */
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(225, 238, 254, 1) 0%, rgba(90, 110, 201, 1) 100%);
+}
+
+.LandingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header img {
+  width: 250px;
+}
+
+.header button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 30px;
+  font-size: 14px;
+}
+
+.header button:hover {
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
+  background-color: #f2f2f2;
+}
+
+.getStarted {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 50px 0;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  gap: 20px;
+  width: 100%;
+}
+
+.getStartedHead, .getStartedBody, .getStartedInput {
+  width: 100%;
+}
+
+h1.edge, h1.conquer {
+  font-size: 90px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  line-height: 90px;
+}
+
+h1 span.edge, h1 span.conquer {
+  color: #000080;
+  font-size: 90px;
+}
+
+.getStartedBody {
+  text-align: center;
+  font-size: 20px;
+}
+
+.getStartedInput {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.getStartedInput input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f5f5f5;
+  transition: all 0.3s ease-in-out;
+  width: 40%;
+}
+
+.getStartedInput a {
+  padding: 10px;
+  border-radius: 100px;
+  font-size: 16px;
+  color: #333;
+  background: linear-gradient(to right, #161647, #3535AD);
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  width: 20%;
+}
+
+.getStartedInput a:hover {
+  background: linear-gradient(to right, #2a2a83, #4343dd);
+  text-decoration: none;
+}
+
+.joinContainerHead h1, .faqContainerHead h1 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #000080;
+}
+
+.joinContent {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.joinDescription {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+
+.joinDescription:hover {
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.joinDescription p {
+  line-height: 30px;
+  font-size: 15px;
+  text-align: justify;
+  text-justify: inter-word;
+  color: #e4e4e4;
+}
+
+.joinDescription h2 {
+  font-size: 22px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.faqContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faqContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: -20px;
+}
+
+.faqDescription {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.7s ease;
+}
+
+.question {
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  margin: 0;
+}
+
+.dropdownContent {
+  padding: 10px;
+  margin-top: 0;
+  color: white;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.7s ease;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.faqDescription.expanded .dropdownContent {
+  opacity: 1;
+  max-height: 150px;
+  margin-top: 5px;
+}
+
+.dropdownContent p {
+  margin: 5px 0;
+  cursor: pointer;
+  transition: background 0.7s ease;
+}
+
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footerSection {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footerSection h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f39c12;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footerSection p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.socialIcons a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.socialIcons a:hover {
+  color: #f39c12;
+}
+
+.footerBottom {
+  margin-top: 20px;
+  padding: 15px 0;
+  background-color: #111;
+  font-size: 0.8rem;
+}
+
+.footerBottom p {
+  margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
   .LandingContainer {
-    text-align: left;
     width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
   }
-  
- 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
+}
+
+@media (max-width: 992px) {
   .header img {
     width: 200px;
   }
-  
-  button.signin {
-    background-color: #ffffff;
-    border: none;
-    color: rgb(63, 63, 63);
-    padding: 10px 40px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 100px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  button.signin:hover {
-    background-color: #dbdbdb;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+
+  h1.edge, h1.conquer {
+    font-size: 70px;
+    line-height: 70px;
   }
 
-  .getStarted {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-bottom: 55px;
-    padding-top: 25px
-  }
-
-  h1.edge {
-    font-size: 4.5rem;
-    color: #dddddd;
-    margin: 0; 
-    text-shadow: 2px 1px #494949;
-  }
-  
-  h1.conquer {
-    font-size: 4rem;
-    color: #dddddd;
-    margin-top: -20px;
-    margin-bottom: 10px;
-    text-shadow: 2px 1px #494949;
-  }
-
- span.edge, span.conquer { 
-    color: #000080;
-    font-size: 5.5rem;
-  }
-  
-  .getStartedHead {
-    width: 50%;
-  }
-  
-  .getStartedBody {
-    color: rgb(255, 255, 255);
-    width: 50%;
-    font-size: 17px;
-  }
-  
-  .getStartedInput {
-    width: 49%;
-    gap: 20px;
-    display: flex;
-    padding: 10px 0;
-  }
-
-  .getStartedInput input {
-    flex: 1;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 100px;
-  }
-
-  .getStartedInput input:focus {
-    outline: none;
-  }
-
-  .link {
-    display: inline-block;
-    width: 30%; /* Make sure it inherits full width */
-    text-decoration: none;
-  }
-  
-  .getStartedInput button {
-    background: linear-gradient(to right, #161647, #3535AD);
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 100px;
-    cursor: pointer;
-    width: 100%; /* Ensure it takes the full width of the parent */
-    font-size: 16px;
-    transition: background 0.3s ease;
-  }
-  
-  .getStartedInput button:hover {
-    background: linear-gradient(to right, #28289e, #5050d6);
-  }
-  
-
-  .joinContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-  }
-
-  .joinContainerHead {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-    text-shadow: 2px 1px #494949;
+  h1 span.edge, h1 span.conquer {
+    font-size: 70px;
   }
 
   .joinContent {
-    display: flex;
-    gap: 50px;
-    margin-top: -15px;
+    flex-direction: column;
   }
 
   .joinDescription {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 15px;
-    border-radius: 5px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-items: space-between;
   }
 
-  .joinDescription h1{
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: 500;
+  .header img {
+    width: 150px;
+  }
+
+  .header button {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  h1.edge, h1.conquer {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  h1 span.edge, h1 span.conquer {
+    font-size: 50px;
+  }
+
+  .getStartedBody  p {
+    font-size: 12px;
+  }
+
+  .getStartedInput {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .getStartedInput input, .getStartedInput a {
+    width: 60%;
+    font-size: 14px;
+  }
+  .joinContainerHead h1, .faqContainerHead h1 {
+    font-size: 20px;
+  }
+
+  .joinDescription h2 {
+    font-size: 18x;
+  }
+}
+
+@media (max-width: 576px) {
+  .header img {
+    width: 150px;
+  }
+
+  h1.edge, h1.conquer {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  h1 span.edge, h1 span.conquer {
+    font-size: 40px;
+  }
+
+  .getStartedBody {
+    font-size: 18px;
   }
 
   .joinDescription p {
-    color: #ffffff;
-    font-size: 16px;
-    text-align: justify;
-    text-justify: inter-word;
-  }
-
-  .faqContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-  }
-
-  .faqContainerHead {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-    text-shadow: 2px 1px #494949;
-  }
-
-  .faqContent {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: -15px;
-  }
-  
-  .faqDescription {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.7s ease;
-  }
-  
-  .question {
-    font-weight: bold;
-    color: white;
-    margin: 0;
-  }
-  
-  /* Hidden by default */
-  .dropdownContent {
-    padding: 10px;
-    margin-top: 0;
-    color: white;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.7s ease;
-    text-align: justify;
-    text-justify: inter-word;
-  }
-  
-  /* When hovered, expand the dropdown and push down the next one */
-  .faqDescription.expanded .dropdownContent {
-    opacity: 1;
-    max-height: 150px; /* Adjust based on content height */
-    margin-top: 5px;
-  }
-  
-  /* Smooth transition for dropdown content */
-  .dropdownContent p {
-    margin: 5px 0;
-    cursor: pointer;
-    transition: background 0.7s ease;
-  }
-  
-
-  .footer {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 30px 20px;
     font-size: 14px;
-    width: 100%; /* Ensure it covers full width */
-    box-sizing: border-box; /* Prevent overflow issues */
-    margin-top:70px;
   }
-  
-  .footerContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 70px;
-    max-width: 1200px;
-    margin: 0 auto;
+
+  .joinDescription h2 {
+    font-size: 20px;
   }
-  
-  .footerSection {
-    flex: 1;
-    min-width: 250px;
-    text-align: justify;
-    text-justify: inter-word;
+
+  .question {
+    font-size: 16px;
   }
-  
-  .footerSection h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #f9f9f9;
+
+  .dropdownContent p {
+    font-size: 14px;
   }
-  
-  .footerSection p {
-    margin: 0 0 8px;
-    color: #bbb;
+
+  .header button {
+    font-size: 12px;
   }
-  
-  .footerSection ul {
-    list-style: none;
-    padding: 0;
+  .joinDescription  {
+    flex-direction: column;
+    width: 100%;
   }
-  
-  .footerSection ul li {
-    margin-bottom: 8px;
-  }
-  
-  .footerSection ul li a {
-    text-decoration: none;
-    color: #bbb;
-    transition: color 0.3s ease;
-  }
-  
-  .footerSection ul li a:hover {
-    color: #fff;
-  }
-  
-  .footerBottom {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #444;
-    color: #bbb;
-  }
-  
-  .socialIcons {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  .socialIcons a {
-    color: #bbb;
-    font-size: 24px;
-    transition: color 0.3s ease;
-  }
-  
-  .socialIcons a:hover {
-    color: #ffffff;
-  }
-  
+}
