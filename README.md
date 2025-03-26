@@ -20,7 +20,17 @@ Follow the steps below to set up and run the project locally:
    npm install
 4. **Install additional dependencies:**
    ```bash
-   npm install react react-dom vite react-router-dom firebase react-icons bootstrap eslint prettier @vitejs/plugin-react
+   npm install react
+   npm install react-dom
+   npm install vite
+   npm install react-router-dom
+   npm install firebase
+   npm install react-icons
+   npm install bootstrap
+   npm install eslint
+   npm install prettier @vitejs/plugin-react
    npm install gsap-trial
+   npm install recharts
+
 
 
