@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { HiLocationMarker } from 'react-icons/hi';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import './auth.css';
@@ -158,15 +159,47 @@ export default function Landing() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="p-6 bg-gray-800 text-white text-center space-y-4">
-        <p>&copy; {new Date().getFullYear()} Crim Edge. All Rights Reserved.</p>
-        <div className="flex justify-center space-x-4">
-          <a href="#" className="hover:text-blue-600"><FaFacebook size={24} /></a>
-          <a href="#" className="hover:text-blue-600"><FaTwitter size={24} /></a>
-          <a href="#" className="hover:text-blue-600"><FaInstagram size={24} /></a>
-        </div>
-      </footer>
+    {/* Footer */}
+<footer className="bg-gray-900 text-white py-10 px-6">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+    {/* Contact Info */}
+    <div className="space-y-4">
+     
+      <div className="flex items-center gap-3">
+        <FaPhone className="text-xl text-gray-300" />
+        <p className="font-medium text-base">+63 969 045 6744</p>
+      </div>
+      <div className="flex items-center gap-3">
+        <FaEnvelope className="text-xl text-gray-300" />
+        <a href="mailto:support@company.com" className="text-blue-400 hover:underline">
+          support@company.com
+        </a>
+      </div>
+    </div>
+
+    {/* About + Socials */}
+    <div>
+      <h3 className="text-white font-semibold mb-3">Crim Edge</h3>
+      <p className="text-sm text-gray-400 mb-5">
+      Sharpen your mind and conquer the Criminology Licensure Exam with expert coaching, 
+      top-notch materials, and a results-driven approach. Stay sharp, stay ahead—Get 
+      the EDGE with CRIM EDGE!
+      </p>
+      <div className="flex space-x-4">
+        <a href="https://www.facebook.com/CrimEdgeReviewCenter" className="bg-gray-700 hover:bg-gray-600 p-2 rounded">
+          <FaFacebook />
+        </a>
+        <a href="#" className="bg-gray-700 hover:bg-gray-600 p-2 rounded">
+          <FaTwitter />
+        </a>
+        <a href="#" className="bg-gray-700 hover:bg-gray-600 p-2 rounded">
+          <FaInstagram />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 }
